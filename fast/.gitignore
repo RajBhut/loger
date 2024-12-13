@@ -1,0 +1,15 @@
+# Ignore virtual environment folder
+venv/
+
+# Ignore Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore other common files and folders
+*.env
+*.venv
+.DS_Store  # MacOS
+.idea/      # JetBrains IDEs
+.vscode/    # VS Code
+*.log
