@@ -8,7 +8,7 @@ import logging
 
 app = FastAPI()
 
-# Enable logging
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -87,6 +87,9 @@ async def download_logs(log_request: dict):
         media_type="text/plain",
         headers={"Content-Disposition": "attachment; filename=filtered_ros_logs.txt"}
     )
+@app.get("/")
+async def read_root():
+    return {"message": "Hello World"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
